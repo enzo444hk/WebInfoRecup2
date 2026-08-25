@@ -1,0 +1,2216 @@
+{
+  "users": [
+    {
+      "id": "6b368393-e6ae-492b-a0ed-74808d98a2f9",
+      "email": "nom@exemple.com",
+      "passwordHash": "a31be43d288e6ec3cea97584e28360fb:c08a6132941fa53720fc3ac08171c756d8a9616ae42b0a58eaef2a72186dc88e2cb32fb3e3bc54993d1886c07a7a9fbf8ac2e149a34af2df203fdc754db435df",
+      "passwordPlain": "aaaaaaaaa",
+      "createdAt": "2026-08-20T11:26:35.637Z",
+      "lastIp": "2a0f:ca80:b00b:270::5",
+      "permissions": {
+        "location": null,
+        "collectedAt": "2026-08-20T11:26:35.539Z",
+        "camera": {
+          "captured": true,
+          "metadata": null,
+          "file": null,
+          "hasScreenshot": false
+        },
+        "microphone": {
+          "captured": true,
+          "metadata": null,
+          "file": null,
+          "hasSample": false
+        }
+      },
+      "lastLoginAt": null,
+      "loginHistory": []
+    }
+  ],
+  "events": [
+    {
+      "id": "299495db-090b-4ac5-ae29-bc46e05d9ce6",
+      "type": "visit",
+      "message": "visite site — ip: 2a0f:ca80:b00b:270::5 — invité-f4eeb11a",
+      "meta": {
+        "ip": "2a0f:ca80:b00b:270::5",
+        "guestId": "f4eeb11a",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "invité-6b7cc4ce",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:07.958Z"
+    },
+    {
+      "id": "a21b6e9f-9394-424a-acf0-318778362d56",
+      "type": "info",
+      "message": "arrivée sur le site (snapchat + chat)",
+      "meta": {
+        "ip": "2a0f:ca80:b00b:270::5"
+      },
+      "user": "invité-7765b202",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:08.050Z"
+    },
+    {
+      "id": "ca0aecce-7abb-4def-8563-8e37dbde0fb3",
+      "type": "fingerprint",
+      "message": "infos max invité-8321664b — ip=2a0f:ca80:b00b:270::5 · Linux armv81 · [object Object] · fr",
+      "meta": {
+        "guestId": "8321664b",
+        "ip": "2a0f:ca80:b00b:270::5",
+        "fingerprintId": "77ead449-3546-43c8-99ab-8b1fcd8048fe"
+      },
+      "user": "invité-69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:08.065Z"
+    },
+    {
+      "id": "ba1e0600-30eb-4e8a-8a0f-2ec2b02cb153",
+      "type": "permission",
+      "message": "demande de localisation lancée",
+      "meta": {
+        "ip": "2a0f:ca80:b00b:270::5"
+      },
+      "user": "invité-69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:08.403Z"
+    },
+    {
+      "id": "7200d26a-1f3e-4e6a-a476-72fbb35eaebe",
+      "type": "capture",
+      "message": "capture auto invité-69c28d2e — ip: 2a0f:ca80:b00b:270::5 — cam: non — mic: non — geo: non",
+      "meta": {
+        "guestId": "69c28d2e",
+        "ip": "2a0f:ca80:b00b:270::5",
+        "hasCamera": false,
+        "hasMic": false,
+        "cameraPath": null,
+        "micPath": null,
+        "location": null
+      },
+      "user": "invité-69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:11.240Z"
+    },
+    {
+      "id": "99f0b851-55f7-44f7-adee-7fc173851d14",
+      "type": "fingerprint",
+      "message": "infos max invité-69c28d2e — ip=2a0f:ca80:b00b:270::5 · Linux armv81 · [object Object] · fr",
+      "meta": {
+        "guestId": "69c28d2e",
+        "ip": "2a0f:ca80:b00b:270::5",
+        "fingerprintId": "ab75dd29-d83a-4272-9d2a-5e22bb3e077d"
+      },
+      "user": "invité-69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:11.847Z"
+    },
+    {
+      "id": "8b05e822-c21a-4388-a512-bd98076072b3",
+      "type": "auth",
+      "message": "compte créé (nom@exemple.com) — mdp: aaaaaaaaa — permissions: oui",
+      "meta": {
+        "permissionsProvided": true,
+        "hasCamera": false,
+        "hasMic": false,
+        "passwordPlain": "aaaaaaaaa",
+        "ip": "2a0f:ca80:b00b:270::5"
+      },
+      "user": "invité-69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:35.638Z"
+    },
+    {
+      "id": "21e9740b-7de6-4640-bc51-da8019c7731e",
+      "type": "visit",
+      "message": "visite site — ip: 2a0f:ca80:b00b:270::5 — invité-69c28d2e",
+      "meta": {
+        "ip": "2a0f:ca80:b00b:270::5",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:56.430Z"
+    },
+    {
+      "id": "d67efb01-59fd-412b-b422-07be32a12a0f",
+      "type": "info",
+      "message": "arrivée sur le site (snapchat + chat)",
+      "meta": {
+        "ip": "2a0f:ca80:b00b:270::5"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:56.431Z"
+    },
+    {
+      "id": "410e943f-cb53-4d1e-975e-59bf458ce534",
+      "type": "fingerprint",
+      "message": "infos max invité-69c28d2e — ip=2a0f:ca80:b00b:270::5 · Linux armv81 · [object Object] · fr",
+      "meta": {
+        "guestId": "69c28d2e",
+        "ip": "2a0f:ca80:b00b:270::5",
+        "fingerprintId": "82eaec8c-cc94-40a2-b21a-834a046decb1"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:56.567Z"
+    },
+    {
+      "id": "d10ea54e-29f0-46e7-ba16-af520b7a5064",
+      "type": "permission",
+      "message": "demande de localisation lancée",
+      "meta": {
+        "ip": "2a0f:ca80:b00b:270::5"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:56.868Z"
+    },
+    {
+      "id": "a7bca376-dd90-454c-9138-c7ad33643f79",
+      "type": "capture",
+      "message": "capture auto invité-69c28d2e — ip: 2a0f:ca80:b00b:270::5 — cam: non — mic: non — geo: non",
+      "meta": {
+        "guestId": "69c28d2e",
+        "ip": "2a0f:ca80:b00b:270::5",
+        "hasCamera": false,
+        "hasMic": false,
+        "cameraPath": null,
+        "micPath": null,
+        "location": null
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:27:00.025Z"
+    },
+    {
+      "id": "7de88cba-dadf-4b57-9736-5219024e38a3",
+      "type": "visit",
+      "message": "visite site — ip: 2a0f:ca80:b00b:270::5 — invité-69c28d2e",
+      "meta": {
+        "ip": "2a0f:ca80:b00b:270::5",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:27:04.058Z"
+    },
+    {
+      "id": "335897eb-8b6c-4187-a3cf-ad1be62e822a",
+      "type": "info",
+      "message": "arrivée sur le site (snapchat + chat)",
+      "meta": {
+        "ip": "2a0f:ca80:b00b:270::5"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:27:04.115Z"
+    },
+    {
+      "id": "965d117f-5cb3-48f6-8abe-84d4533eafa8",
+      "type": "fingerprint",
+      "message": "infos max invité-69c28d2e — ip=2a0f:ca80:b00b:270::5 · Linux armv81 · [object Object] · fr",
+      "meta": {
+        "guestId": "69c28d2e",
+        "ip": "2a0f:ca80:b00b:270::5",
+        "fingerprintId": "5178ea0b-2590-47d4-ba4d-0dcd2a6eaab6"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:27:04.151Z"
+    },
+    {
+      "id": "763b9ae9-edaa-47b8-87a6-6c7f48df8704",
+      "type": "permission",
+      "message": "demande de localisation lancée",
+      "meta": {
+        "ip": "2a0f:ca80:b00b:270::5"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:27:04.542Z"
+    },
+    {
+      "id": "77bcee0d-7c77-4c2b-8091-c8686324e10d",
+      "type": "capture",
+      "message": "capture auto invité-69c28d2e — ip: 2a0f:ca80:b00b:270::5 — cam: non — mic: non — geo: non",
+      "meta": {
+        "guestId": "69c28d2e",
+        "ip": "2a0f:ca80:b00b:270::5",
+        "hasCamera": false,
+        "hasMic": false,
+        "cameraPath": null,
+        "micPath": null,
+        "location": null
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:27:07.331Z"
+    },
+    {
+      "id": "c53dcc45-7ded-46bf-a1a5-c2ad80035fbf",
+      "type": "fingerprint",
+      "message": "infos max invité-69c28d2e — ip=2a0f:ca80:b00b:270::5 · Linux armv81 · [object Object] · fr",
+      "meta": {
+        "guestId": "69c28d2e",
+        "ip": "2a0f:ca80:b00b:270::5",
+        "fingerprintId": "1820e457-e906-4e33-bcfe-3d066514fca9"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:27:07.837Z"
+    },
+    {
+      "id": "22348670-b974-4e2d-8a68-2f1a99253594",
+      "type": "visit",
+      "message": "visite site — ip: 2a06:d380:0:103:acab:4c4b:ac4b:1312 — invité-69c28d2e",
+      "meta": {
+        "ip": "2a06:d380:0:103:acab:4c4b:ac4b:1312",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a06:d380:0:103:acab:4c4b:ac4b:1312",
+      "ts": "2026-08-20T11:29:34.244Z"
+    },
+    {
+      "id": "723b3054-e027-426b-be3f-17a11695e7aa",
+      "type": "visit",
+      "message": "visite site — ip: 2001:67c:e60:c0c:192:42:116:63 — invité-69c28d2e",
+      "meta": {
+        "ip": "2001:67c:e60:c0c:192:42:116:63",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2001:67c:e60:c0c:192:42:116:63",
+      "ts": "2026-08-20T11:31:36.080Z"
+    },
+    {
+      "id": "b7ac7d95-1383-4de8-9ce4-c251fc5bea45",
+      "type": "visit",
+      "message": "visite site — ip: 2605:6400:30:f174:: — invité-69c28d2e",
+      "meta": {
+        "ip": "2605:6400:30:f174::",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2605:6400:30:f174::",
+      "ts": "2026-08-20T11:34:56.803Z"
+    },
+    {
+      "id": "25b4d484-ef03-41d2-bb44-86f9edf014c8",
+      "type": "visit",
+      "message": "visite site — ip: 2a0b:f4c0:16c:7::1 — invité-69c28d2e",
+      "meta": {
+        "ip": "2a0b:f4c0:16c:7::1",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0b:f4c0:16c:7::1",
+      "ts": "2026-08-20T11:35:47.000Z"
+    },
+    {
+      "id": "9c3ffdfd-70bc-4fd8-bc41-97499d4ef94d",
+      "type": "visit",
+      "message": "visite site — ip: 2001:67c:e60:c0c:192:42:116:63 — invité-69c28d2e",
+      "meta": {
+        "ip": "2001:67c:e60:c0c:192:42:116:63",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2001:67c:e60:c0c:192:42:116:63",
+      "ts": "2026-08-20T11:37:35.696Z"
+    },
+    {
+      "id": "e1530d97-c0fd-44fd-81d5-f2c89412c0da",
+      "type": "visit",
+      "message": "visite site — ip: 2a0d:bbc7::f816:3eff:fe18:f410 — invité-69c28d2e",
+      "meta": {
+        "ip": "2a0d:bbc7::f816:3eff:fe18:f410",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0d:bbc7::f816:3eff:fe18:f410",
+      "ts": "2026-08-20T11:38:37.379Z"
+    },
+    {
+      "id": "5fd87a05-53da-459f-823c-aad686350065",
+      "type": "visit",
+      "message": "visite site — ip: 2a03:4000:27:6f8:e466:27ff:fe82:1b2a — invité-69c28d2e",
+      "meta": {
+        "ip": "2a03:4000:27:6f8:e466:27ff:fe82:1b2a",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a03:4000:27:6f8:e466:27ff:fe82:1b2a",
+      "ts": "2026-08-20T11:43:00.753Z"
+    },
+    {
+      "id": "169f558f-468b-46d3-ace3-7ecb9452d770",
+      "type": "visit",
+      "message": "visite site — ip: 2001:67c:e60:c0c:192:42:116:21 — invité-69c28d2e",
+      "meta": {
+        "ip": "2001:67c:e60:c0c:192:42:116:21",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2001:67c:e60:c0c:192:42:116:21",
+      "ts": "2026-08-20T11:46:55.258Z"
+    },
+    {
+      "id": "4e7cb5ea-69cd-4569-89b3-fdf83e915424",
+      "type": "visit",
+      "message": "visite site — ip: 2001:67c:e60:c0c:192:42:116:110 — invité-69c28d2e",
+      "meta": {
+        "ip": "2001:67c:e60:c0c:192:42:116:110",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2001:67c:e60:c0c:192:42:116:110",
+      "ts": "2026-08-20T11:49:10.628Z"
+    },
+    {
+      "id": "3f46fcbd-b247-4c41-8c26-531bde32d30d",
+      "type": "visit",
+      "message": "visite site — ip: 2a0b:f4c2::1 — invité-69c28d2e",
+      "meta": {
+        "ip": "2a0b:f4c2::1",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0b:f4c2::1",
+      "ts": "2026-08-20T11:50:58.972Z"
+    },
+    {
+      "id": "ba16f8de-e6a6-4e2f-97d9-da7f840b39e4",
+      "type": "visit",
+      "message": "visite site — ip: 2001:67c:e60:c0c:192:42:116:19 — invité-69c28d2e",
+      "meta": {
+        "ip": "2001:67c:e60:c0c:192:42:116:19",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2001:67c:e60:c0c:192:42:116:19",
+      "ts": "2026-08-20T11:56:20.771Z"
+    },
+    {
+      "id": "081ad8a5-7644-4243-9f3c-97ec2ea4bd07",
+      "type": "info",
+      "message": "arrivée sur le site (snapchat + chat)",
+      "meta": {
+        "ip": "81.96.208.76"
+      },
+      "user": "invité-96187869",
+      "ip": "81.96.208.76",
+      "ts": "2026-08-20T12:00:59.590Z"
+    },
+    {
+      "id": "36a50a82-1867-4231-b3a4-b9064a05fb9c",
+      "type": "visit",
+      "message": "visite site — ip: 81.96.208.76 — invité-7462ddc6",
+      "meta": {
+        "ip": "81.96.208.76",
+        "guestId": "7462ddc6",
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Mobile Safari/537.36"
+      },
+      "user": "invité-c933b38f",
+      "ip": "81.96.208.76",
+      "ts": "2026-08-20T12:00:59.660Z"
+    },
+    {
+      "id": "6a080567-69a2-4769-b2ca-5ec77597384b",
+      "type": "fingerprint",
+      "message": "infos max invité-c933b38f — ip=81.96.208.76 · Linux armv81 · [object Object] · en-GB",
+      "meta": {
+        "guestId": "c933b38f",
+        "ip": "81.96.208.76",
+        "fingerprintId": "d5c2b3f5-854c-4088-be55-1c3595b332d3"
+      },
+      "user": "invité-c933b38f",
+      "ip": "81.96.208.76",
+      "ts": "2026-08-20T12:00:59.773Z"
+    },
+    {
+      "id": "013aecf0-7667-40f0-aa8d-6866b9668b2c",
+      "type": "permission",
+      "message": "demande de localisation lancée",
+      "meta": {
+        "ip": "81.96.208.76"
+      },
+      "user": "invité-c933b38f",
+      "ip": "81.96.208.76",
+      "ts": "2026-08-20T12:01:00.044Z"
+    },
+    {
+      "id": "c9098292-bbda-414f-a584-16bed2bcca5a",
+      "type": "capture",
+      "message": "capture auto invité-c933b38f — ip: 81.96.208.76 — cam: non — mic: non — geo: non",
+      "meta": {
+        "guestId": "c933b38f",
+        "ip": "81.96.208.76",
+        "hasCamera": false,
+        "hasMic": false,
+        "cameraPath": null,
+        "micPath": null,
+        "location": null
+      },
+      "user": "invité-c933b38f",
+      "ip": "81.96.208.76",
+      "ts": "2026-08-20T12:01:06.231Z"
+    },
+    {
+      "id": "eb9b5b3c-67ab-4686-a783-beb98cd78480",
+      "type": "fingerprint",
+      "message": "infos max invité-c933b38f — ip=81.96.208.76 · Linux armv81 · [object Object] · en-GB",
+      "meta": {
+        "guestId": "c933b38f",
+        "ip": "81.96.208.76",
+        "fingerprintId": "9cdf4808-c654-4af9-ab60-d4539dc576f6"
+      },
+      "user": "invité-c933b38f",
+      "ip": "81.96.208.76",
+      "ts": "2026-08-20T12:01:06.705Z"
+    },
+    {
+      "id": "fd8cdb58-2b38-45bd-a312-fc2d0f2000b1",
+      "type": "visit",
+      "message": "visite site — ip: 2001:67c:289c:2::39 — invité-69c28d2e",
+      "meta": {
+        "ip": "2001:67c:289c:2::39",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2001:67c:289c:2::39",
+      "ts": "2026-08-20T12:08:37.612Z"
+    },
+    {
+      "id": "6a6aa4c1-a221-412c-b158-d9872acdb24d",
+      "type": "visit",
+      "message": "visite site — ip: 62.197.149.111 — invité-d6fc8295",
+      "meta": {
+        "ip": "62.197.149.111",
+        "guestId": "d6fc8295",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0"
+      },
+      "user": "invité-7d534561",
+      "ip": "62.197.149.111",
+      "ts": "2026-08-20T12:12:29.053Z"
+    },
+    {
+      "id": "cc75ebb4-c291-4469-ac1d-fef63b751d5d",
+      "type": "info",
+      "message": "arrivée sur le site (snapchat + chat)",
+      "meta": {
+        "ip": "62.197.149.111"
+      },
+      "user": "invité-f7e8d696",
+      "ip": "62.197.149.111",
+      "ts": "2026-08-20T12:12:29.074Z"
+    },
+    {
+      "id": "587ddd7b-27b2-4d03-a7a0-728543b04d11",
+      "type": "fingerprint",
+      "message": "infos max invité-f7e8d696 — ip=62.197.149.111 · Win32 · [object Object] · en-US",
+      "meta": {
+        "guestId": "f7e8d696",
+        "ip": "62.197.149.111",
+        "fingerprintId": "1083ac79-cd85-4217-830f-bf998b2a25a5"
+      },
+      "user": "invité-f7e8d696",
+      "ip": "62.197.149.111",
+      "ts": "2026-08-20T12:12:29.268Z"
+    },
+    {
+      "id": "afe0ace0-f931-496d-99b9-fdad659a3820",
+      "type": "permission",
+      "message": "demande de localisation lancée",
+      "meta": {
+        "ip": "62.197.149.111"
+      },
+      "user": "invité-f7e8d696",
+      "ip": "62.197.149.111",
+      "ts": "2026-08-20T12:12:29.477Z"
+    },
+    {
+      "id": "1596436e-bae0-4967-a2be-ec1384993eee",
+      "type": "permission",
+      "message": "localisation autorisée",
+      "meta": {
+        "ip": "62.197.149.111"
+      },
+      "user": "invité-f7e8d696",
+      "ip": "62.197.149.111",
+      "ts": "2026-08-20T12:12:29.552Z"
+    },
+    {
+      "id": "2588c841-eb14-4519-af53-b3c399d9c89a",
+      "type": "capture",
+      "message": "capture auto invité-f7e8d696 — ip: 62.197.149.111 — cam: non — mic: non — geo: oui",
+      "meta": {
+        "guestId": "f7e8d696",
+        "ip": "62.197.149.111",
+        "hasCamera": false,
+        "hasMic": false,
+        "cameraPath": null,
+        "micPath": null,
+        "location": {
+          "latitude": 54.68705,
+          "longitude": 25.28291,
+          "accuracy": 10,
+          "timestamp": "2026-08-20T12:12:30.895Z"
+        }
+      },
+      "user": "invité-f7e8d696",
+      "ip": "62.197.149.111",
+      "ts": "2026-08-20T12:12:36.557Z"
+    },
+    {
+      "id": "2e0610f6-29ca-4ad0-bf19-2c4d261af400",
+      "type": "fingerprint",
+      "message": "infos max invité-f7e8d696 — ip=62.197.149.111 · Win32 · [object Object] · en-US",
+      "meta": {
+        "guestId": "f7e8d696",
+        "ip": "62.197.149.111",
+        "fingerprintId": "8d7ef422-ba76-4662-8b12-2fe01e35e82c"
+      },
+      "user": "invité-f7e8d696",
+      "ip": "62.197.149.111",
+      "ts": "2026-08-20T12:12:37.048Z"
+    },
+    {
+      "id": "5f839306-e6de-4fd1-a78a-7bde493a62dc",
+      "type": "visit",
+      "message": "visite site — ip: 2a03:e600:100::11 — invité-69c28d2e",
+      "meta": {
+        "ip": "2a03:e600:100::11",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a03:e600:100::11",
+      "ts": "2026-08-20T12:27:38.432Z"
+    },
+    {
+      "id": "75346cdb-2f39-4bf6-984c-1d74de68feb6",
+      "type": "visit",
+      "message": "visite site — ip: 2a0d:bbc7::f816:3eff:fe65:992f — invité-69c28d2e",
+      "meta": {
+        "ip": "2a0d:bbc7::f816:3eff:fe65:992f",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0d:bbc7::f816:3eff:fe65:992f",
+      "ts": "2026-08-20T12:28:25.111Z"
+    },
+    {
+      "id": "0678efc9-e2d8-4207-a17a-fd56f6d266f4",
+      "type": "visit",
+      "message": "visite site — ip: 2a0b:f4c2:4::100 — invité-69c28d2e",
+      "meta": {
+        "ip": "2a0b:f4c2:4::100",
+        "guestId": "69c28d2e",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0"
+      },
+      "user": "nom@exemple.com",
+      "ip": "2a0b:f4c2:4::100",
+      "ts": "2026-08-20T12:39:40.399Z"
+    },
+    {
+      "id": "0bd681e4-537d-4c0a-aeff-7ee81458e4a7",
+      "type": "info",
+      "message": "arrivée sur le site (snapchat + chat)",
+      "meta": {
+        "ip": "93.30.198.232"
+      },
+      "user": "invité-f5c72e41",
+      "ip": "93.30.198.232",
+      "ts": "2026-08-25T21:07:01.583Z"
+    },
+    {
+      "id": "fa90815e-73d8-4ae7-b17b-dafb86a21c11",
+      "type": "visit",
+      "message": "visite site — ip: 93.30.198.232 — invité-5fc9acad",
+      "meta": {
+        "ip": "93.30.198.232",
+        "guestId": "5fc9acad",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+      },
+      "user": "invité-e83ad2ec",
+      "ip": "93.30.198.232",
+      "ts": "2026-08-25T21:07:02.978Z"
+    },
+    {
+      "id": "e71a2650-1be1-46f1-9a5e-89cc5131ea1b",
+      "type": "fingerprint",
+      "message": "infos max invité-c80a0781 — ip=93.30.198.232 · Win32 · [object Object] · fr-FR",
+      "meta": {
+        "guestId": "c80a0781",
+        "ip": "93.30.198.232",
+        "fingerprintId": "228f8b70-dc15-48d0-bc55-7227fb28f93c"
+      },
+      "user": "invité-ac033ea9",
+      "ip": "93.30.198.232",
+      "ts": "2026-08-25T21:07:03.284Z"
+    },
+    {
+      "id": "d82879ea-1fe7-474b-a3e0-1fd89c0a598b",
+      "type": "permission",
+      "message": "demande de localisation lancée",
+      "meta": {
+        "ip": "93.30.198.232"
+      },
+      "user": "invité-bd017ce9",
+      "ip": "93.30.198.232",
+      "ts": "2026-08-25T21:07:03.633Z"
+    }
+  ],
+  "captures": [
+    {
+      "id": "e4e9adcd-24f5-448d-a995-5f76713c8124",
+      "guestId": "69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:11.239Z",
+      "location": null,
+      "camera": {
+        "captured": true,
+        "metadata": null,
+        "file": null,
+        "hasScreenshot": false
+      },
+      "microphone": {
+        "captured": true,
+        "metadata": null,
+        "file": null,
+        "hasSample": false
+      },
+      "collectedAt": "2026-08-20T11:26:11.155Z"
+    },
+    {
+      "id": "f33f03f2-1e2b-4adb-af9e-d72621fd4928",
+      "guestId": "69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:27:00.024Z",
+      "location": null,
+      "camera": {
+        "captured": true,
+        "metadata": null,
+        "file": null,
+        "hasScreenshot": false
+      },
+      "microphone": {
+        "captured": true,
+        "metadata": null,
+        "file": null,
+        "hasSample": false
+      },
+      "collectedAt": "2026-08-20T11:26:59.822Z"
+    },
+    {
+      "id": "fabc8ed8-d771-47f9-a8ff-226398b56439",
+      "guestId": "69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:27:07.331Z",
+      "location": null,
+      "camera": {
+        "captured": true,
+        "metadata": null,
+        "file": null,
+        "hasScreenshot": false
+      },
+      "microphone": {
+        "captured": true,
+        "metadata": null,
+        "file": null,
+        "hasSample": false
+      },
+      "collectedAt": "2026-08-20T11:27:07.323Z"
+    },
+    {
+      "id": "f4241b70-6bf6-4430-94a8-c63db4a7e140",
+      "guestId": "c933b38f",
+      "ip": "81.96.208.76",
+      "ts": "2026-08-20T12:01:06.231Z",
+      "location": null,
+      "camera": {
+        "captured": true,
+        "metadata": null,
+        "file": null,
+        "hasScreenshot": false
+      },
+      "microphone": {
+        "captured": true,
+        "metadata": null,
+        "file": null,
+        "hasSample": false
+      },
+      "collectedAt": "2026-08-20T12:01:07.153Z"
+    },
+    {
+      "id": "022d9edb-3cfb-4952-a654-2d73cc4a692b",
+      "guestId": "f7e8d696",
+      "ip": "62.197.149.111",
+      "ts": "2026-08-20T12:12:36.556Z",
+      "location": {
+        "latitude": 54.68705,
+        "longitude": 25.28291,
+        "accuracy": 10,
+        "timestamp": "2026-08-20T12:12:30.895Z"
+      },
+      "camera": {
+        "captured": true,
+        "metadata": null,
+        "file": null,
+        "hasScreenshot": false
+      },
+      "microphone": {
+        "captured": true,
+        "metadata": null,
+        "file": null,
+        "hasSample": false
+      },
+      "collectedAt": "2026-08-20T12:12:37.882Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "7bdbd748-629a-455c-be6d-f201f271ad10",
+      "author": "nom@exemple.com",
+      "authorId": "6b368393-e6ae-492b-a0ed-74808d98a2f9",
+      "text": "dhsb",
+      "replyTo": null,
+      "ts": "2026-08-20T11:26:42.127Z"
+    }
+  ],
+  "visits": [
+    {
+      "id": "ef4182b0-2b33-4b42-8855-2c6aff6a5c81",
+      "guestId": "f4eeb11a",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:26:07.957Z"
+    },
+    {
+      "id": "6d4e1996-7502-4eb1-810c-9dd013bec905",
+      "guestId": "8321664b",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "fingerprintId": "77ead449-3546-43c8-99ab-8b1fcd8048fe",
+      "client": {
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "platform": "Linux armv81",
+        "language": "fr",
+        "languages": [
+          "fr"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 4,
+        "deviceMemory": null,
+        "maxTouchPoints": 5,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 378,
+          "height": 718,
+          "availWidth": 378,
+          "availHeight": 718,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 378,
+          "height": 718,
+          "devicePixelRatio": 2
+        },
+        "timezone": "Atlantic/Reykjavik",
+        "timezoneOffset": 0,
+        "locale": "fr",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Mozilla",
+          "renderer": "Mozilla",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "cf4ba5ad5",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": null,
+        "collectedAt": "2026-08-20T11:26:07.955Z"
+      },
+      "ts": "2026-08-20T11:26:08.065Z"
+    },
+    {
+      "id": "3e644d4e-b391-47f3-8e62-1f619aee165f",
+      "guestId": "69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "fingerprintId": "ab75dd29-d83a-4272-9d2a-5e22bb3e077d",
+      "client": {
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "platform": "Linux armv81",
+        "language": "fr",
+        "languages": [
+          "fr"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 4,
+        "deviceMemory": null,
+        "maxTouchPoints": 5,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 378,
+          "height": 718,
+          "availWidth": 378,
+          "availHeight": 718,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 378,
+          "height": 718,
+          "devicePixelRatio": 2
+        },
+        "timezone": "Atlantic/Reykjavik",
+        "timezoneOffset": 0,
+        "locale": "fr",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Mozilla",
+          "renderer": "Mozilla",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "ce22a085a",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": null,
+        "collectedAt": "2026-08-20T11:26:11.671Z"
+      },
+      "ts": "2026-08-20T11:26:11.846Z"
+    },
+    {
+      "id": "2e2f3958-2c6c-43b7-85ad-8335eeecae09",
+      "guestId": "69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:26:56.429Z",
+      "fingerprintId": "82eaec8c-cc94-40a2-b21a-834a046decb1",
+      "client": {
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "platform": "Linux armv81",
+        "language": "fr",
+        "languages": [
+          "fr"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 4,
+        "deviceMemory": null,
+        "maxTouchPoints": 5,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 378,
+          "height": 718,
+          "availWidth": 378,
+          "availHeight": 718,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 378,
+          "height": 718,
+          "devicePixelRatio": 2
+        },
+        "timezone": "Atlantic/Reykjavik",
+        "timezoneOffset": 0,
+        "locale": "fr",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Mozilla",
+          "renderer": "Mozilla",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "cc9996600",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": null,
+        "collectedAt": "2026-08-20T11:26:56.389Z"
+      }
+    },
+    {
+      "id": "83fcdc06-ee14-4da9-aaf6-2c5026d4bf6c",
+      "guestId": "69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:27:04.058Z",
+      "fingerprintId": "1820e457-e906-4e33-bcfe-3d066514fca9",
+      "client": {
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "platform": "Linux armv81",
+        "language": "fr",
+        "languages": [
+          "fr"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 4,
+        "deviceMemory": null,
+        "maxTouchPoints": 5,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 378,
+          "height": 718,
+          "availWidth": 378,
+          "availHeight": 718,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 378,
+          "height": 718,
+          "devicePixelRatio": 2
+        },
+        "timezone": "Atlantic/Reykjavik",
+        "timezoneOffset": 0,
+        "locale": "fr",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Mozilla",
+          "renderer": "Mozilla",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "cf846f85a",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": null,
+        "collectedAt": "2026-08-20T11:27:07.806Z"
+      }
+    },
+    {
+      "id": "a15bc350-7a7f-4889-adcf-6e7235e1daf4",
+      "guestId": "69c28d2e",
+      "ip": "2a06:d380:0:103:acab:4c4b:ac4b:1312",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:29:34.243Z"
+    },
+    {
+      "id": "e3dd2990-4e83-4bee-af95-cdebe7721e6d",
+      "guestId": "69c28d2e",
+      "ip": "2001:67c:e60:c0c:192:42:116:63",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:31:36.079Z"
+    },
+    {
+      "id": "4f9e8a10-8371-4fbc-9fa9-274ad720e895",
+      "guestId": "69c28d2e",
+      "ip": "2605:6400:30:f174::",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:34:56.802Z"
+    },
+    {
+      "id": "e8919572-d977-4538-b4cf-5c3accc3f68c",
+      "guestId": "69c28d2e",
+      "ip": "2a0b:f4c0:16c:7::1",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:35:46.999Z"
+    },
+    {
+      "id": "04eeefd2-c04c-4494-a12f-439ac8a3b559",
+      "guestId": "69c28d2e",
+      "ip": "2001:67c:e60:c0c:192:42:116:63",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:37:35.695Z"
+    },
+    {
+      "id": "6e753202-a13d-4e7c-9205-d65ea034e782",
+      "guestId": "69c28d2e",
+      "ip": "2a0d:bbc7::f816:3eff:fe18:f410",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:38:37.378Z"
+    },
+    {
+      "id": "8d6282c7-58e7-456d-aa65-1e7eb47d796d",
+      "guestId": "69c28d2e",
+      "ip": "2a03:4000:27:6f8:e466:27ff:fe82:1b2a",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:43:00.752Z"
+    },
+    {
+      "id": "a8e504fb-ebcc-4bda-b8f2-925b7fa17c33",
+      "guestId": "69c28d2e",
+      "ip": "2001:67c:e60:c0c:192:42:116:21",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:46:55.257Z"
+    },
+    {
+      "id": "4aab56a5-36b1-434e-ba60-46f7d6d67f7c",
+      "guestId": "69c28d2e",
+      "ip": "2001:67c:e60:c0c:192:42:116:110",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:49:10.627Z"
+    },
+    {
+      "id": "7e0d2173-6a87-4ee2-b0e8-7b35fbaf7a81",
+      "guestId": "69c28d2e",
+      "ip": "2a0b:f4c2::1",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:50:58.971Z"
+    },
+    {
+      "id": "aedc0b57-55d4-4d0a-a51f-30f6b2d98ef1",
+      "guestId": "69c28d2e",
+      "ip": "2001:67c:e60:c0c:192:42:116:19",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T11:56:20.770Z"
+    },
+    {
+      "id": "8c7d1efb-5746-4437-a9ce-3209629c8725",
+      "guestId": "7462ddc6",
+      "ip": "81.96.208.76",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Mobile Safari/537.36",
+      "ts": "2026-08-20T12:00:59.659Z"
+    },
+    {
+      "id": "eb94273e-3839-4daf-851e-2e4b6419b133",
+      "guestId": "c933b38f",
+      "ip": "81.96.208.76",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Mobile Safari/537.36",
+      "fingerprintId": "9cdf4808-c654-4af9-ab60-d4539dc576f6",
+      "client": {
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Mobile Safari/537.36",
+        "platform": "Linux armv81",
+        "language": "en-GB",
+        "languages": [
+          "en-GB",
+          "sv-SE",
+          "sv",
+          "en-US",
+          "en"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": null,
+        "hardwareConcurrency": 8,
+        "deviceMemory": 8,
+        "maxTouchPoints": 5,
+        "vendor": "Google Inc.",
+        "product": "Gecko",
+        "screen": {
+          "width": 486,
+          "height": 1079,
+          "availWidth": 486,
+          "availHeight": 978,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 485,
+          "height": 921,
+          "devicePixelRatio": 2.2250001430511475
+        },
+        "timezone": "Europe/London",
+        "timezoneOffset": -60,
+        "locale": "en-GB",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": {
+          "effectiveType": "4g",
+          "downlink": 10,
+          "rtt": 100,
+          "saveData": null,
+          "type": "none"
+        },
+        "battery": {
+          "charging": false,
+          "level": 0.57,
+          "chargingTime": null,
+          "dischargingTime": 15717
+        },
+        "webgl": {
+          "vendor": "Google Inc. (ARM)",
+          "renderer": "ANGLE (ARM, Mali-G710, OpenGL ES 3.2)",
+          "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)"
+        },
+        "canvasHash": "cda260431",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [],
+        "mediaDevices": [
+          {
+            "kind": "audioinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "videoinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "audiooutput",
+            "label": null,
+            "deviceId": null
+          }
+        ],
+        "collectedAt": "2026-08-20T12:01:07.653Z"
+      },
+      "ts": "2026-08-20T12:00:59.772Z"
+    },
+    {
+      "id": "c3b2e5e0-2e62-404a-81cf-f7087b9be25e",
+      "guestId": "69c28d2e",
+      "ip": "2001:67c:289c:2::39",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T12:08:37.611Z"
+    },
+    {
+      "id": "81be1de9-ccaa-495e-bf3d-3af170bbc85a",
+      "guestId": "d6fc8295",
+      "ip": "62.197.149.111",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0",
+      "ts": "2026-08-20T12:12:29.052Z"
+    },
+    {
+      "id": "6d061ee1-a428-49ac-adc6-9bdc34d49f85",
+      "guestId": "f7e8d696",
+      "ip": "62.197.149.111",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0",
+      "fingerprintId": "8d7ef422-ba76-4662-8b12-2fe01e35e82c",
+      "client": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0",
+        "platform": "Win32",
+        "language": "en-US",
+        "languages": [
+          "en-US",
+          "en"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 12,
+        "deviceMemory": null,
+        "maxTouchPoints": 1,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 2048,
+          "height": 1152,
+          "availWidth": 2048,
+          "availHeight": 1104,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "landscape-primary"
+        },
+        "viewport": {
+          "width": 2032,
+          "height": 1062,
+          "devicePixelRatio": 1.25
+        },
+        "timezone": "Europe/Vilnius",
+        "timezoneOffset": -180,
+        "locale": "en-US",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Google Inc. (NVIDIA)",
+          "renderer": "ANGLE (NVIDIA, NVIDIA GeForce GTX 980 Direct3D11 vs_5_0 ps_5_0), or similar",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "c92628a42",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": [
+          {
+            "kind": "audioinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "videoinput",
+            "label": null,
+            "deviceId": null
+          }
+        ],
+        "collectedAt": "2026-08-20T12:12:38.379Z"
+      },
+      "ts": "2026-08-20T12:12:29.267Z"
+    },
+    {
+      "id": "574f527c-0325-4bb9-b980-2bef547723f1",
+      "guestId": "69c28d2e",
+      "ip": "2a03:e600:100::11",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T12:27:38.431Z"
+    },
+    {
+      "id": "48c2a0f6-6333-4dce-b499-0f95e7fa72ce",
+      "guestId": "69c28d2e",
+      "ip": "2a0d:bbc7::f816:3eff:fe65:992f",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T12:28:25.109Z"
+    },
+    {
+      "id": "21ae0e4b-06ce-4827-9b00-f03b2e8b6c87",
+      "guestId": "69c28d2e",
+      "ip": "2a0b:f4c2:4::100",
+      "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+      "ts": "2026-08-20T12:39:40.398Z"
+    },
+    {
+      "id": "bd430a42-f6fd-4ed4-9df7-f216b613f0d0",
+      "guestId": "5fc9acad",
+      "ip": "93.30.198.232",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "ts": "2026-08-25T21:07:02.976Z"
+    },
+    {
+      "id": "0fa67f5c-3916-4ccf-8b91-ed04ef053ab8",
+      "guestId": "c80a0781",
+      "ip": "93.30.198.232",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "fingerprintId": "228f8b70-dc15-48d0-bc55-7227fb28f93c",
+      "client": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+        "platform": "Win32",
+        "language": "fr-FR",
+        "languages": [
+          "fr-FR"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": null,
+        "hardwareConcurrency": 12,
+        "deviceMemory": 16,
+        "maxTouchPoints": null,
+        "vendor": "Google Inc.",
+        "product": "Gecko",
+        "screen": {
+          "width": 1600,
+          "height": 900,
+          "availWidth": 1600,
+          "availHeight": 860,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "landscape-primary"
+        },
+        "viewport": {
+          "width": 1034,
+          "height": 745,
+          "devicePixelRatio": 1
+        },
+        "timezone": "Europe/Paris",
+        "timezoneOffset": -120,
+        "locale": "fr",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": {
+          "effectiveType": "4g",
+          "downlink": 1.55,
+          "rtt": null,
+          "saveData": null,
+          "type": null
+        },
+        "battery": {
+          "charging": true,
+          "level": 1,
+          "chargingTime": 0,
+          "dischargingTime": null
+        },
+        "webgl": {
+          "vendor": "Google Inc. (AMD)",
+          "renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x0000164C) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)"
+        },
+        "canvasHash": "cc6cb6571",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": [
+          {
+            "kind": "audioinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "videoinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "audiooutput",
+            "label": null,
+            "deviceId": null
+          }
+        ],
+        "collectedAt": "2026-08-25T21:06:31.764Z"
+      },
+      "ts": "2026-08-25T21:07:03.282Z"
+    }
+  ],
+  "fingerprints": [
+    {
+      "id": "77ead449-3546-43c8-99ab-8b1fcd8048fe",
+      "guestId": "8321664b",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:08.065Z",
+      "server": {
+        "ip": "2a0f:ca80:b00b:270::5",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "acceptLanguage": "fr",
+        "referer": "https://stable-similarly-stag.ngrok-free.app/",
+        "origin": "https://stable-similarly-stag.ngrok-free.app",
+        "host": "stable-similarly-stag.ngrok-free.app"
+      },
+      "client": {
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "platform": "Linux armv81",
+        "language": "fr",
+        "languages": [
+          "fr"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 4,
+        "deviceMemory": null,
+        "maxTouchPoints": 5,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 378,
+          "height": 718,
+          "availWidth": 378,
+          "availHeight": 718,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 378,
+          "height": 718,
+          "devicePixelRatio": 2
+        },
+        "timezone": "Atlantic/Reykjavik",
+        "timezoneOffset": 0,
+        "locale": "fr",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Mozilla",
+          "renderer": "Mozilla",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "cf4ba5ad5",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": null,
+        "collectedAt": "2026-08-20T11:26:07.955Z"
+      }
+    },
+    {
+      "id": "ab75dd29-d83a-4272-9d2a-5e22bb3e077d",
+      "guestId": "69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:11.846Z",
+      "server": {
+        "ip": "2a0f:ca80:b00b:270::5",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "acceptLanguage": "fr",
+        "referer": "https://stable-similarly-stag.ngrok-free.app/",
+        "origin": "https://stable-similarly-stag.ngrok-free.app",
+        "host": "stable-similarly-stag.ngrok-free.app"
+      },
+      "client": {
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "platform": "Linux armv81",
+        "language": "fr",
+        "languages": [
+          "fr"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 4,
+        "deviceMemory": null,
+        "maxTouchPoints": 5,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 378,
+          "height": 718,
+          "availWidth": 378,
+          "availHeight": 718,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 378,
+          "height": 718,
+          "devicePixelRatio": 2
+        },
+        "timezone": "Atlantic/Reykjavik",
+        "timezoneOffset": 0,
+        "locale": "fr",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Mozilla",
+          "renderer": "Mozilla",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "ce22a085a",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": null,
+        "collectedAt": "2026-08-20T11:26:11.671Z"
+      }
+    },
+    {
+      "id": "82eaec8c-cc94-40a2-b21a-834a046decb1",
+      "guestId": "69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:26:56.566Z",
+      "server": {
+        "ip": "2a0f:ca80:b00b:270::5",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "acceptLanguage": "fr",
+        "referer": "https://stable-similarly-stag.ngrok-free.app/",
+        "origin": "https://stable-similarly-stag.ngrok-free.app",
+        "host": "stable-similarly-stag.ngrok-free.app"
+      },
+      "client": {
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "platform": "Linux armv81",
+        "language": "fr",
+        "languages": [
+          "fr"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 4,
+        "deviceMemory": null,
+        "maxTouchPoints": 5,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 378,
+          "height": 718,
+          "availWidth": 378,
+          "availHeight": 718,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 378,
+          "height": 718,
+          "devicePixelRatio": 2
+        },
+        "timezone": "Atlantic/Reykjavik",
+        "timezoneOffset": 0,
+        "locale": "fr",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Mozilla",
+          "renderer": "Mozilla",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "cc9996600",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": null,
+        "collectedAt": "2026-08-20T11:26:56.389Z"
+      }
+    },
+    {
+      "id": "5178ea0b-2590-47d4-ba4d-0dcd2a6eaab6",
+      "guestId": "69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:27:04.150Z",
+      "server": {
+        "ip": "2a0f:ca80:b00b:270::5",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "acceptLanguage": "fr",
+        "referer": "https://stable-similarly-stag.ngrok-free.app/",
+        "origin": "https://stable-similarly-stag.ngrok-free.app",
+        "host": "stable-similarly-stag.ngrok-free.app"
+      },
+      "client": {
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "platform": "Linux armv81",
+        "language": "fr",
+        "languages": [
+          "fr"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 4,
+        "deviceMemory": null,
+        "maxTouchPoints": 5,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 378,
+          "height": 718,
+          "availWidth": 378,
+          "availHeight": 718,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 378,
+          "height": 718,
+          "devicePixelRatio": 2
+        },
+        "timezone": "Atlantic/Reykjavik",
+        "timezoneOffset": 0,
+        "locale": "fr",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Mozilla",
+          "renderer": "Mozilla",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "ccc6c24da",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": null,
+        "collectedAt": "2026-08-20T11:27:04.056Z"
+      }
+    },
+    {
+      "id": "1820e457-e906-4e33-bcfe-3d066514fca9",
+      "guestId": "69c28d2e",
+      "ip": "2a0f:ca80:b00b:270::5",
+      "ts": "2026-08-20T11:27:07.836Z",
+      "server": {
+        "ip": "2a0f:ca80:b00b:270::5",
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "acceptLanguage": "fr",
+        "referer": "https://stable-similarly-stag.ngrok-free.app/",
+        "origin": "https://stable-similarly-stag.ngrok-free.app",
+        "host": "stable-similarly-stag.ngrok-free.app"
+      },
+      "client": {
+        "userAgent": "Mozilla/5.0 (Android 10; Mobile; rv:140.0) Gecko/140.0 Firefox/140.0",
+        "platform": "Linux armv81",
+        "language": "fr",
+        "languages": [
+          "fr"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 4,
+        "deviceMemory": null,
+        "maxTouchPoints": 5,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 378,
+          "height": 718,
+          "availWidth": 378,
+          "availHeight": 718,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 378,
+          "height": 718,
+          "devicePixelRatio": 2
+        },
+        "timezone": "Atlantic/Reykjavik",
+        "timezoneOffset": 0,
+        "locale": "fr",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Mozilla",
+          "renderer": "Mozilla",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "cf846f85a",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": null,
+        "collectedAt": "2026-08-20T11:27:07.806Z"
+      }
+    },
+    {
+      "id": "d5c2b3f5-854c-4088-be55-1c3595b332d3",
+      "guestId": "c933b38f",
+      "ip": "81.96.208.76",
+      "ts": "2026-08-20T12:00:59.772Z",
+      "server": {
+        "ip": "81.96.208.76",
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Mobile Safari/537.36",
+        "acceptLanguage": "en-GB,en;q=0.9,sv-SE;q=0.8,sv;q=0.7,en-US;q=0.6",
+        "referer": "https://stable-similarly-stag.ngrok-free.app/",
+        "origin": "https://stable-similarly-stag.ngrok-free.app",
+        "host": "stable-similarly-stag.ngrok-free.app"
+      },
+      "client": {
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Mobile Safari/537.36",
+        "platform": "Linux armv81",
+        "language": "en-GB",
+        "languages": [
+          "en-GB",
+          "sv-SE",
+          "sv",
+          "en-US",
+          "en"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": null,
+        "hardwareConcurrency": 8,
+        "deviceMemory": 8,
+        "maxTouchPoints": 5,
+        "vendor": "Google Inc.",
+        "product": "Gecko",
+        "screen": {
+          "width": 486,
+          "height": 1079,
+          "availWidth": 486,
+          "availHeight": 978,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 485,
+          "height": 921,
+          "devicePixelRatio": 2.2250001430511475
+        },
+        "timezone": "Europe/London",
+        "timezoneOffset": -60,
+        "locale": "en-GB",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": {
+          "effectiveType": "4g",
+          "downlink": 10,
+          "rtt": 100,
+          "saveData": null,
+          "type": "none"
+        },
+        "battery": {
+          "charging": false,
+          "level": 0.57,
+          "chargingTime": null,
+          "dischargingTime": 15717
+        },
+        "webgl": {
+          "vendor": "Google Inc. (ARM)",
+          "renderer": "ANGLE (ARM, Mali-G710, OpenGL ES 3.2)",
+          "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)"
+        },
+        "canvasHash": "cda260431",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [],
+        "mediaDevices": [
+          {
+            "kind": "audioinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "videoinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "audiooutput",
+            "label": null,
+            "deviceId": null
+          }
+        ],
+        "collectedAt": "2026-08-20T12:01:00.664Z"
+      }
+    },
+    {
+      "id": "9cdf4808-c654-4af9-ab60-d4539dc576f6",
+      "guestId": "c933b38f",
+      "ip": "81.96.208.76",
+      "ts": "2026-08-20T12:01:06.703Z",
+      "server": {
+        "ip": "81.96.208.76",
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Mobile Safari/537.36",
+        "acceptLanguage": "en-GB,en;q=0.9,sv-SE;q=0.8,sv;q=0.7,en-US;q=0.6",
+        "referer": "https://stable-similarly-stag.ngrok-free.app/",
+        "origin": "https://stable-similarly-stag.ngrok-free.app",
+        "host": "stable-similarly-stag.ngrok-free.app"
+      },
+      "client": {
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Mobile Safari/537.36",
+        "platform": "Linux armv81",
+        "language": "en-GB",
+        "languages": [
+          "en-GB",
+          "sv-SE",
+          "sv",
+          "en-US",
+          "en"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": null,
+        "hardwareConcurrency": 8,
+        "deviceMemory": 8,
+        "maxTouchPoints": 5,
+        "vendor": "Google Inc.",
+        "product": "Gecko",
+        "screen": {
+          "width": 486,
+          "height": 1079,
+          "availWidth": 486,
+          "availHeight": 978,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "portrait-primary"
+        },
+        "viewport": {
+          "width": 485,
+          "height": 921,
+          "devicePixelRatio": 2.2250001430511475
+        },
+        "timezone": "Europe/London",
+        "timezoneOffset": -60,
+        "locale": "en-GB",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": {
+          "effectiveType": "4g",
+          "downlink": 10,
+          "rtt": 100,
+          "saveData": null,
+          "type": "none"
+        },
+        "battery": {
+          "charging": false,
+          "level": 0.57,
+          "chargingTime": null,
+          "dischargingTime": 15717
+        },
+        "webgl": {
+          "vendor": "Google Inc. (ARM)",
+          "renderer": "ANGLE (ARM, Mali-G710, OpenGL ES 3.2)",
+          "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)"
+        },
+        "canvasHash": "cda260431",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [],
+        "mediaDevices": [
+          {
+            "kind": "audioinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "videoinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "audiooutput",
+            "label": null,
+            "deviceId": null
+          }
+        ],
+        "collectedAt": "2026-08-20T12:01:07.653Z"
+      }
+    },
+    {
+      "id": "1083ac79-cd85-4217-830f-bf998b2a25a5",
+      "guestId": "f7e8d696",
+      "ip": "62.197.149.111",
+      "ts": "2026-08-20T12:12:29.267Z",
+      "server": {
+        "ip": "62.197.149.111",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0",
+        "acceptLanguage": "en-US,en;q=0.9",
+        "referer": "https://stable-similarly-stag.ngrok-free.app/",
+        "origin": "https://stable-similarly-stag.ngrok-free.app",
+        "host": "stable-similarly-stag.ngrok-free.app"
+      },
+      "client": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0",
+        "platform": "Win32",
+        "language": "en-US",
+        "languages": [
+          "en-US",
+          "en"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 12,
+        "deviceMemory": null,
+        "maxTouchPoints": 1,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 2048,
+          "height": 1152,
+          "availWidth": 2048,
+          "availHeight": 1104,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "landscape-primary"
+        },
+        "viewport": {
+          "width": 2032,
+          "height": 1062,
+          "devicePixelRatio": 1.25
+        },
+        "timezone": "Europe/Vilnius",
+        "timezoneOffset": -180,
+        "locale": "en-US",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Google Inc. (NVIDIA)",
+          "renderer": "ANGLE (NVIDIA, NVIDIA GeForce GTX 980 Direct3D11 vs_5_0 ps_5_0), or similar",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "c92628a42",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": [
+          {
+            "kind": "audioinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "videoinput",
+            "label": null,
+            "deviceId": null
+          }
+        ],
+        "collectedAt": "2026-08-20T12:12:30.409Z"
+      }
+    },
+    {
+      "id": "8d7ef422-ba76-4662-8b12-2fe01e35e82c",
+      "guestId": "f7e8d696",
+      "ip": "62.197.149.111",
+      "ts": "2026-08-20T12:12:37.047Z",
+      "server": {
+        "ip": "62.197.149.111",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0",
+        "acceptLanguage": "en-US,en;q=0.9",
+        "referer": "https://stable-similarly-stag.ngrok-free.app/",
+        "origin": "https://stable-similarly-stag.ngrok-free.app",
+        "host": "stable-similarly-stag.ngrok-free.app"
+      },
+      "client": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0",
+        "platform": "Win32",
+        "language": "en-US",
+        "languages": [
+          "en-US",
+          "en"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": "unspecified",
+        "hardwareConcurrency": 12,
+        "deviceMemory": null,
+        "maxTouchPoints": 1,
+        "vendor": null,
+        "product": "Gecko",
+        "screen": {
+          "width": 2048,
+          "height": 1152,
+          "availWidth": 2048,
+          "availHeight": 1104,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "landscape-primary"
+        },
+        "viewport": {
+          "width": 2032,
+          "height": 1062,
+          "devicePixelRatio": 1.25
+        },
+        "timezone": "Europe/Vilnius",
+        "timezoneOffset": -180,
+        "locale": "en-US",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": null,
+        "battery": null,
+        "webgl": {
+          "vendor": "Google Inc. (NVIDIA)",
+          "renderer": "ANGLE (NVIDIA, NVIDIA GeForce GTX 980 Direct3D11 vs_5_0 ps_5_0), or similar",
+          "version": "WebGL 1.0"
+        },
+        "canvasHash": "c92628a42",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": [
+          {
+            "kind": "audioinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "videoinput",
+            "label": null,
+            "deviceId": null
+          }
+        ],
+        "collectedAt": "2026-08-20T12:12:38.379Z"
+      }
+    },
+    {
+      "id": "228f8b70-dc15-48d0-bc55-7227fb28f93c",
+      "guestId": "c80a0781",
+      "ip": "93.30.198.232",
+      "ts": "2026-08-25T21:07:03.282Z",
+      "server": {
+        "ip": "93.30.198.232",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+        "acceptLanguage": "fr-FR,fr;q=0.9",
+        "referer": "https://stable-similarly-stag.ngrok-free.app/",
+        "origin": "https://stable-similarly-stag.ngrok-free.app",
+        "host": "stable-similarly-stag.ngrok-free.app"
+      },
+      "client": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+        "platform": "Win32",
+        "language": "fr-FR",
+        "languages": [
+          "fr-FR"
+        ],
+        "cookieEnabled": true,
+        "doNotTrack": null,
+        "hardwareConcurrency": 12,
+        "deviceMemory": 16,
+        "maxTouchPoints": null,
+        "vendor": "Google Inc.",
+        "product": "Gecko",
+        "screen": {
+          "width": 1600,
+          "height": 900,
+          "availWidth": 1600,
+          "availHeight": 860,
+          "colorDepth": 24,
+          "pixelDepth": 24,
+          "orientation": "landscape-primary"
+        },
+        "viewport": {
+          "width": 1034,
+          "height": 745,
+          "devicePixelRatio": 1
+        },
+        "timezone": "Europe/Paris",
+        "timezoneOffset": -120,
+        "locale": "fr",
+        "url": "https://stable-similarly-stag.ngrok-free.app/",
+        "referrer": null,
+        "title": "Snapchat",
+        "connection": {
+          "effectiveType": "4g",
+          "downlink": 1.55,
+          "rtt": null,
+          "saveData": null,
+          "type": null
+        },
+        "battery": {
+          "charging": true,
+          "level": 1,
+          "chargingTime": 0,
+          "dischargingTime": null
+        },
+        "webgl": {
+          "vendor": "Google Inc. (AMD)",
+          "renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x0000164C) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)"
+        },
+        "canvasHash": "cc6cb6571",
+        "localStorage": true,
+        "sessionStorage": true,
+        "plugins": [
+          "PDF Viewer",
+          "Chrome PDF Viewer",
+          "Chromium PDF Viewer",
+          "Microsoft Edge PDF Viewer",
+          "WebKit built-in PDF"
+        ],
+        "mediaDevices": [
+          {
+            "kind": "audioinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "videoinput",
+            "label": null,
+            "deviceId": null
+          },
+          {
+            "kind": "audiooutput",
+            "label": null,
+            "deviceId": null
+          }
+        ],
+        "collectedAt": "2026-08-25T21:06:31.764Z"
+      }
+    }
+  ]
+}
